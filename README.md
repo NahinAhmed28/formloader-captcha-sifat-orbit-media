@@ -1,14 +1,25 @@
 # Formloader Captcha Sifat Orbit Media
 
-This repository is a Laravel-based form-loader project with captcha-related workflow naming. It is associated with Orbit Media and appears focused on form submission, validation, and bot-prevention flow.
+This Laravel-based project focuses on form loading, form submission, and captcha validation for an Orbit Media workflow.
 
-## Project Details
+## Features
 
-- Repository: `NahinAhmed28/formloader-captcha-sifat-orbit-media`
-- Default branch: `master`
-- Visibility: public
-- Project type: Laravel form/captcha application
-- Main focus: form loading and captcha validation
+- Form rendering/submission workflow
+- Captcha validation integration point
+- Laravel backend for request handling
+- Environment-based secret/configuration management
+
+## Modules
+
+- Form module: fields, validation, and submission processing
+- Captcha module: provider keys, verification, and bot-prevention flow
+- Admin module: submitted record review when enabled
+- Data module: models, migrations, and stored submissions
+- Integration module: captcha provider or external service configuration
+
+## System Architecture
+
+The system follows Laravel MVC. Users submit forms through views, controllers validate input and captcha tokens, service classes can verify captcha providers, and models persist valid submissions. Captcha secrets must live in environment variables.
 
 ## Getting Started
 
@@ -22,9 +33,3 @@ npm install
 npm run dev
 php artisan serve
 ```
-
-Configure captcha keys, database settings, and app URL values in `.env` before local testing.
-
-## Notes
-
-Do not commit production captcha secrets. Add provider-specific setup details here when confirmed.
